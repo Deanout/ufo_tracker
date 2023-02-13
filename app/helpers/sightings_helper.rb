@@ -12,7 +12,7 @@ module SightingsHelper
       },
       tooltip: sighting.ufo.status,
       label: sighting.ufo.name,
-      color: '#ff0000'
+      color: '#00ff00'
     }
   end
 end
