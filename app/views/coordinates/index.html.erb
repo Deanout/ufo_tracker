@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Coordinates</h1>
+
+<div id="coordinates">
+  <% @coordinates.each do |coordinate| %>
+    <%= render coordinate %>
+    <p>
+      <%= link_to "Show this coordinate", coordinate %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New coordinate", new_coordinate_path %>

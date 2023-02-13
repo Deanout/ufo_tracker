@@ -1,0 +1,11 @@
+<%# Fields for coordinates %>
+<div class="nested-fields">
+  <div class="field">
+    <%= f.input :lat %>
+  </div>
+  <div class="field">
+    <%= f.input :long %>
+  </div>
+  <%# Remove link %>
+  <%= link_to_remove_association "Delete Coordinate", f, class: "btn btn-danger" %>
+</div>

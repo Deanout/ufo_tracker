@@ -1,0 +1,25 @@
+<div id="<%= dom_id ufo %>">
+  <p>
+    <strong>Name:</strong>
+    <%= ufo.name %>
+  </p>
+  <p>
+    <strong>Status:</strong>
+    <%= ufo.status %>
+  </p>
+  <div>
+    <strong>Description:</strong>
+    <%= ufo.description %>
+  </div>
+  <% if ufo.sightings.any? %>
+    <p>
+      <strong>Sightings:</strong>
+      <ul>
+        <% ufo.sightings.each do |sighting| %>
+          <li><%= link_to sighting.date, sighting %></li>
+          <%= area_map [geo_json(sighting)] %>
+        <% end %>
+      </ul>
+    </p>
+  <% end %>
+</div>

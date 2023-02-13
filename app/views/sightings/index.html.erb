@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Sightings</h1>
+
+<div id="sightings">
+  <% @sightings.each do |sighting| %>
+    <%= render sighting %>
+    <p>
+      <%= link_to "Show this sighting", sighting %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New sighting", new_sighting_path %>

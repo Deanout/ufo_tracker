@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ufos</h1>
+
+<div id="ufos">
+  <% @ufos.each do |ufo| %>
+    <%= render ufo %>
+    <p>
+      <%= link_to "Show this ufo", ufo %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New ufo", new_ufo_path %>

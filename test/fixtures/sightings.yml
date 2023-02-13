@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2023-02-13
+  time: 2023-02-13 06:51:53
+  ufo: one
+
+two:
+  date: 2023-02-13
+  time: 2023-02-13 06:51:53
+  ufo: two

@@ -1,0 +1,6 @@
+<%= simple_form_for @ufo do |f| %>
+  <%= f.input :name %>
+  <%= f.input :status, collection: Ufo.statuses.keys, include_blank: false, default: "active" %>
+  <%= f.input :description, as: :rich_text_area %>
+  <%= f.submit %>
+<% end %>

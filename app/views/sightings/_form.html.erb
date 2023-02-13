@@ -1,0 +1,14 @@
+<%= simple_form_for @sighting do |f| %>
+  <%= f.input :ufo_id, collection: Ufo.all.map { |ufo| [ufo.name, ufo.id] }, include_blank: false %>
+  <%= f.input :date %>
+  <%= f.input :time %>
+  <div class="coordinates">
+    <%= f.simple_fields_for :coordinates do |coordinates_form| %>
+      <%= render 'coordinates/fields', f: coordinates_form %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association "Add Coordinate", f, :coordinates, partial: "coordinates/fields", class: "btn btn-success" %>
+    </div>
+  </div>
+  <%= f.submit "Submit", class:"btn btn-primary" %>
+<% end %>

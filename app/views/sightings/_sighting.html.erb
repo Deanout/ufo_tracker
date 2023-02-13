@@ -1,0 +1,25 @@
+<div id="<%= dom_id sighting %>">
+  <p>
+    <strong>Date:</strong>
+    <%= sighting.date %>
+  </p>
+  <p>
+    <strong>Time:</strong>
+    <%= sighting.time %>
+  </p>
+  <p>
+    <strong>Ufo:</strong>
+    <%= sighting.ufo.name %>
+  </p>
+  <% if sighting.coordinates.any? %>
+    <p>
+      <strong>Coordinates:</strong>
+      <ul>
+        <% sighting.coordinates.each do |coordinate| %>
+          <li><%= coordinate.lat %>, <%= coordinate.long %> | <%= link_to "Edit", coordinate %></li>
+        <% end %>
+      </ul>
+    </p>
+  <% end %>
+  <%= area_map [geo_json(sighting)] %>
+</div>

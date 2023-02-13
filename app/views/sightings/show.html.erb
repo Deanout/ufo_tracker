@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @sighting %>
+
+<div>
+  <%= link_to "Edit this sighting", edit_sighting_path(@sighting) %> |
+  <%= link_to "Back to sightings", sightings_path %>
+
+  <%= button_to "Destroy this sighting", @sighting, method: :delete %>
+</div>

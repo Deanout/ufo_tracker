@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lat: 1
+  long: 1
+  sighting: one
+
+two:
+  lat: 1
+  long: 1
+  sighting: two
